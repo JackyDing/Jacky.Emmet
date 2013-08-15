@@ -227,12 +227,9 @@ namespace Jacky.Emmet
         {
             TextSelection selection = App.ActiveDocument.Selection as TextSelection;
             selection.MoveToAbsoluteOffset(toAbsolute(beg), false);
-            if (beg != end)
-            {
-                selection.MoveToAbsoluteOffset(toAbsolute(end), true);
-                return true;
-            }
-            return false;
+            selection.MoveToAbsoluteOffset(toAbsolute(end), true);
+            update();
+            return true;
         }
         
         /// <summary>
@@ -251,6 +248,7 @@ namespace Jacky.Emmet
             point0.MoveToAbsoluteOffset(toAbsolute(beg));
             point1.MoveToAbsoluteOffset(toAbsolute(end));
             point0.ReplaceText(point1, value, 1);
+            update();
             return true;
         }
 
@@ -340,13 +338,11 @@ namespace Jacky.Emmet
 
         private int toPosition(int absolute)
         {
-            TextSelection selection = App.ActiveDocument.Selection as TextSelection;
-            VirtualPoint active = selection.ActivePoint;
-            EditPoint point0 = active.CreateEditPoint();
-            EditPoint point1 = active.CreateEditPoint();
-            point0.StartOfDocument();
-            point1.MoveToAbsoluteOffset(absolute);
-            string text = point0.GetText(point1);
+            TextDocument doc = App.ActiveDocument.Object("TextDocument") as TextDocument;
+            TextSelection selection = doc.Selection as TextSelection;
+            EditPoint point = selection.ActivePoint.CreateEditPoint();
+            point.MoveToAbsoluteOffset(absolute);
+            string text = doc.StartPoint.CreateEditPoint().GetText(point);
             return (absolute - 1) + number(text, "\r\n", text.Length - 1);
         }
 
@@ -372,32 +368,45 @@ namespace Jacky.Emmet
             }
         }
 
+        private void update(int reset = 0)
+        {
+            if (reset == 1)
+            {
+                _data.Text = "";
+                _data.Line = "";
+                _data.Anchor = 1;
+                _data.Active = 1;
+                _data.LineBegOffset = 1;
+                _data.LineEndOffset = 1;
+            }
+            else
+            {
+                TextSelection selection = App.ActiveDocument.Selection as TextSelection;
+                VirtualPoint active = selection.ActivePoint;
+                VirtualPoint anchor = selection.AnchorPoint;
+                EditPoint point0 = active.CreateEditPoint();
+                EditPoint point1 = active.CreateEditPoint();
+                point0.StartOfLine();
+                point1.EndOfLine();
+                _data.Line = point0.GetText(point1);
+                _data.LineBegOffset = toPosition(point0.AbsoluteCharOffset);
+                _data.LineEndOffset = toPosition(point1.AbsoluteCharOffset);
+                point0.StartOfDocument();
+                point1.EndOfDocument();
+                _data.Text = point0.GetText(point1);
+                _data.Anchor = toPosition(anchor.AbsoluteCharOffset);
+                _data.Active = toPosition(active.AbsoluteCharOffset);
+            }
+        }
+
         private void enterCallback()
         {
-            TextDocument doc = App.ActiveDocument.Object("TextDocument") as TextDocument;
-            TextSelection selection = doc.Selection as TextSelection;
-            VirtualPoint active = selection.ActivePoint;
-            VirtualPoint anchor = selection.AnchorPoint;
-            EditPoint point0 = active.CreateEditPoint();
-            EditPoint point1 = active.CreateEditPoint();
-            point0.StartOfLine();
-            point1.EndOfLine();
-            _data.Text = doc.StartPoint.CreateEditPoint().GetText(doc.EndPoint);
-            _data.Line = point0.GetText(point1);
-            _data.Anchor = toPosition(anchor.AbsoluteCharOffset);
-            _data.Active = toPosition(active.AbsoluteCharOffset);
-            _data.LineBegOffset = toPosition(point0.AbsoluteCharOffset);
-            _data.LineEndOffset = toPosition(point1.AbsoluteCharOffset);
+            update(0);
         }
 
         private void leaveCallback()
         {
-            _data.Text = "";
-            _data.Line = "";
-            _data.Anchor = 1;
-            _data.Active = 1;
-            _data.LineBegOffset = 1;
-            _data.LineEndOffset = 1;
+            update(1);
         }
 
         private void MenuItemCallback(object sender, EventArgs e)

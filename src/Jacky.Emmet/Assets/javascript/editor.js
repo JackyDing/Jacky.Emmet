@@ -91,7 +91,7 @@ emmet.define('editor', function (require, _) {
 		    var assocs = require('assocs').data();
 		    for (var i = 0; i < assocs.length; i++) {
 		        var assoc = assocs[i];
-		        var pattern = new RegExp(assoc.pattern);
+		        var pattern = new RegExp(assoc.pattern, "i");
 		        if (pattern.test(path)) {
 		            return assoc.syntax;
 		        }
@@ -104,7 +104,7 @@ emmet.define('editor', function (require, _) {
 		    var assocs = require('assocs').data();
 		    for (var i = 0; i < assocs.length; i++) {
 		        var assoc = assocs[i];
-		        var pattern = new RegExp(assoc.pattern);
+		        var pattern = new RegExp(assoc.pattern, "i");
 		        if (pattern.test(path)) {
 		            return assoc.profile;
 		        }
