@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <Extern href="stdidcmd.h"/>
+    <Extern href="vsshlids.h"/>
+
+    <Commands package="guidEmmetPkg">
+
+        <Menus>
+            <Menu guid="guidEmmetSet" id="mnuIdEmmet" priority="0x0700" type="Menu">
+                <Parent guid="guidSHLMainMenu" id="IDG_VS_MM_TOOLSADDINS"/>
+                <Strings>
+                    <ButtonText>Emmet</ButtonText>
+                    <CommandName>Emmet</CommandName>
+                </Strings>
+            </Menu>
+        </Menus>
+
+        <Groups>
+            <Group guid="guidEmmetSet" id="grpIdEmmet" priority="0x0600">
+                <Parent guid="guidEmmetSet" id="mnuIdEmmet"/>
+            </Group>
+        </Groups>
+
+        <Buttons>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0000" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0000</ButtonText>
+                    <CommandName>cmdIdEmmet0000</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0001" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0001</ButtonText>
+                    <CommandName>cmdIdEmmet0001</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0002" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0002</ButtonText>
+                    <CommandName>cmdIdEmmet0002</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0003" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0003</ButtonText>
+                    <CommandName>cmdIdEmmet0003</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0004" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0004</ButtonText>
+                    <CommandName>cmdIdEmmet0004</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0005" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0005</ButtonText>
+                    <CommandName>cmdIdEmmet0005</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0006" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0006</ButtonText>
+                    <CommandName>cmdIdEmmet0006</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0007" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0007</ButtonText>
+                    <CommandName>cmdIdEmmet0007</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0008" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0008</ButtonText>
+                    <CommandName>cmdIdEmmet0008</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0009" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0009</ButtonText>
+                    <CommandName>cmdIdEmmet0009</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0100" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0100</ButtonText>
+                    <CommandName>cmdIdEmmet0100</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0101" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0101</ButtonText>
+                    <CommandName>cmdIdEmmet0101</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0102" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0102</ButtonText>
+                    <CommandName>cmdIdEmmet0102</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0103" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0103</ButtonText>
+                    <CommandName>cmdIdEmmet0103</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0104" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0104</ButtonText>
+                    <CommandName>cmdIdEmmet0104</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0200" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0200</ButtonText>
+                    <CommandName>cmdIdEmmet0200</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0201" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0201</ButtonText>
+                    <CommandName>cmdIdEmmet0201</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0202" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0202</ButtonText>
+                    <CommandName>cmdIdEmmet0202</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0203" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0203</ButtonText>
+                    <CommandName>cmdIdEmmet0203</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0204" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0204</ButtonText>
+                    <CommandName>cmdIdEmmet0204</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0300" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0300</ButtonText>
+                    <CommandName>cmdIdEmmet0300</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0301" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0301</ButtonText>
+                    <CommandName>cmdIdEmmet0301</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0302" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0302</ButtonText>
+                    <CommandName>cmdIdEmmet0302</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0303" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0303</ButtonText>
+                    <CommandName>cmdIdEmmet0303</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0304" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0304</ButtonText>
+                    <CommandName>cmdIdEmmet0304</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0400" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0400</ButtonText>
+                    <CommandName>cmdIdEmmet0400</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0401" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0401</ButtonText>
+                    <CommandName>cmdIdEmmet0401</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0402" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0402</ButtonText>
+                    <CommandName>cmdIdEmmet0402</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0403" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0403</ButtonText>
+                    <CommandName>cmdIdEmmet0403</CommandName>
+                </Strings>
+            </Button>
+            <Button guid="guidEmmetSet" id="cmdIdEmmet0404" priority="1002" type="Button">
+                <Parent guid="guidEmmetSet" id="grpIdEmmet" />
+                <CommandFlag>TextChanges</CommandFlag>
+                <CommandFlag>DynamicVisibility</CommandFlag>
+                <CommandFlag>DefaultInvisible</CommandFlag>
+                <CommandFlag>DefaultDisabled</CommandFlag>
+                <Strings>
+                    <ButtonText>cmdIdEmmet0404</ButtonText>
+                    <CommandName>cmdIdEmmet0404</CommandName>
+                </Strings>
+            </Button>
+        </Buttons>
+
+    </Commands>
+
+    <KeyBindings>
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0000" editor="guidVSStd97" key1="1" mod1="Control" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0001" editor="guidVSStd97" key1="2" mod1="Control" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0002" editor="guidVSStd97" key1="3" mod1="Control" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0003" editor="guidVSStd97" key1="4" mod1="Control" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0004" editor="guidVSStd97" key1="m" mod1="Alt" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0005" editor="guidVSStd97" key1="j" mod1="Alt" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0006" editor="guidVSStd97" key1="r" mod1="Alt" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0007" editor="guidVSStd97" key1="a" mod1="Alt" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0008" editor="guidVSStd97" key1="d" mod1="Alt" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0009" editor="guidVSStd97" key1="w" mod1="Alt" />
+        <KeyBinding guid="guidEmmetSet" id="cmdIdEmmet0100" editor="guidVSStd97" key1="s" mod1="Alt" />
+    </KeyBindings>
+    
+    <Symbols>
+        <GuidSymbol name="guidEmmetPkg" value="{a87e6d9e-8043-44a8-9f50-655335eb940d}" />
+        <GuidSymbol name="guidEmmetSet" value="{f0ee116a-d7f6-4107-bae0-191dffb01d56}">
+            <IDSymbol name="mnuIdEmmet" value="0x1100" />
+            <IDSymbol name="grpIdEmmet" value="0x1200" />
+            <IDSymbol name="cmdIdEmmet0000" value="0x2000" />
+            <IDSymbol name="cmdIdEmmet0001" value="0x2001" />
+            <IDSymbol name="cmdIdEmmet0002" value="0x2002" />
+            <IDSymbol name="cmdIdEmmet0003" value="0x2003" />
+            <IDSymbol name="cmdIdEmmet0004" value="0x2004" />
+            <IDSymbol name="cmdIdEmmet0005" value="0x2005" />
+            <IDSymbol name="cmdIdEmmet0006" value="0x2006" />
+            <IDSymbol name="cmdIdEmmet0007" value="0x2007" />
+            <IDSymbol name="cmdIdEmmet0008" value="0x2008" />
+            <IDSymbol name="cmdIdEmmet0009" value="0x2009" />
+            <IDSymbol name="cmdIdEmmet0100" value="0x2100" />
+            <IDSymbol name="cmdIdEmmet0101" value="0x2101" />
+            <IDSymbol name="cmdIdEmmet0102" value="0x2102" />
+            <IDSymbol name="cmdIdEmmet0103" value="0x2103" />
+            <IDSymbol name="cmdIdEmmet0104" value="0x2104" />
+            <IDSymbol name="cmdIdEmmet0200" value="0x2200" />
+            <IDSymbol name="cmdIdEmmet0201" value="0x2201" />
+            <IDSymbol name="cmdIdEmmet0202" value="0x2202" />
+            <IDSymbol name="cmdIdEmmet0203" value="0x2203" />
+            <IDSymbol name="cmdIdEmmet0204" value="0x2204" />
+            <IDSymbol name="cmdIdEmmet0300" value="0x2300" />
+            <IDSymbol name="cmdIdEmmet0301" value="0x2301" />
+            <IDSymbol name="cmdIdEmmet0302" value="0x2302" />
+            <IDSymbol name="cmdIdEmmet0303" value="0x2303" />
+            <IDSymbol name="cmdIdEmmet0304" value="0x2304" />
+            <IDSymbol name="cmdIdEmmet0400" value="0x2400" />
+            <IDSymbol name="cmdIdEmmet0401" value="0x2401" />
+            <IDSymbol name="cmdIdEmmet0402" value="0x2402" />
+            <IDSymbol name="cmdIdEmmet0403" value="0x2403" />
+            <IDSymbol name="cmdIdEmmet0404" value="0x2404" />
+        </GuidSymbol>
+    </Symbols>
+
+</CommandTable>

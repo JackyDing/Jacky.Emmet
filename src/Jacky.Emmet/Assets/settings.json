@@ -1,0 +1,32 @@
+[
+    {
+        "pattern": "\\.(htm|html|aspx|ascx|skin|master|cshtml|vbhtml|spark)$",
+        "syntax": "html",
+        "profile": "html"
+    },
+    {
+        "pattern": "\\.css$",
+        "syntax": "css",
+        "profile": "plain"
+    },
+    {
+        "pattern": "\\.less$",
+        "syntax": "less",
+        "profile": "plain"
+    },
+    {
+        "pattern": "\\.scss$",
+        "syntax": "scss",
+        "profile": "plain"
+    },
+    {
+        "pattern": "\\.sass$",
+        "syntax": "sass",
+        "profile": "plain"
+    },
+    {
+        "pattern": "\\.(xml|dtd|resx|config|xsd|xsl|xslt|xaml)$",
+        "syntax": "xsl",
+        "profile": "xml"
+    }
+]
