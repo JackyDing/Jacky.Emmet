@@ -252,6 +252,7 @@ namespace Jacky.Emmet
 
             int IActiveScriptSite.OnEnterScript()
             {
+                LastException = null;
                 return 0;
             }
 
@@ -361,7 +362,6 @@ namespace Jacky.Emmet
             {
                 if (Site.LastException != null)
                     throw Site.LastException;
-
                 throw;
             }
 
