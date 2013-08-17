@@ -46,12 +46,19 @@ var editor = emmet.exec(function(require, _) {
  * @memberOf __Jacky.Emmet
  */
 emmet.exec(function (require, _) {
+    require('filters\\bem');
+    require('filters\\comment');
+    require('filters\\escape');
     require('filters\\format');
+    require('filters\\haml');
     require('filters\\html');
+    require('filters\\single-line');
+    require('filters\\trim');
     require('filters\\xsl');
     require('processors\\tag-name');
     require('processors\\pasted-content');
     require('processors\\resource-matcher');
+    require('generators\\lorem-ipsum');
     require('actions\\expandAbbreviation');
     require('actions\\wrapWithAbbreviation');
     require('actions\\matchPair');
