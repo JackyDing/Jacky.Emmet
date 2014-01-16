@@ -84,6 +84,7 @@ emmet.define('expandAbbreviation', function(require, _) {
 	handlers.add(function(editor, syntax, profile) {
 		var caretPos = editor.getSelectionRange().end;
 		var abbr = module.findAbbreviation(editor);
+			
 		if (abbr) {
 			var content = emmet.expandAbbreviation(abbr, syntax, profile, 
 					require('actionUtils').captureContext(editor));

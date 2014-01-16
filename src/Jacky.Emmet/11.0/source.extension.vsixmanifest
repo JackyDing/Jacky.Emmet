@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="50c299d1-dded-46d1-87cd-541b5f21b2f2" Version="1.0" Language="en-US" Publisher="Jacky" />
+        <Identity Id="50c299d1-dded-46d1-87cd-541b5f21b2f2" Version="1.1" Language="en-US" Publisher="Jacky" />
         <DisplayName>Visual Studio Emmet 2012</DisplayName>
         <Description xml:space="preserve">Visual Studio Emmet is a visual studio plugin for Emmet, a web-developer’s toolkit that can greatly improve your HTML &amp; CSS workflow.</Description>
         <MoreInfo>http://docs.emmet.io/</MoreInfo>
         <License>LICENSE.txt</License>
-        <ReleaseNotes>HISTORY.txt</ReleaseNotes>
+        <ReleaseNotes>HISTORY.2012.txt</ReleaseNotes>
         <Icon>Jacky.Emmet.ico</Icon>
         <PreviewImage>Jacky.Emmet.png</PreviewImage>
         <Tags>XML XSL HTML CSS Emmet</Tags>
