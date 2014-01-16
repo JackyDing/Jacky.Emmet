@@ -186,7 +186,8 @@ emmet.define('file', function(require, _) {
 		locateFile: function(baseFile, fileName) {
 			var fso = new ActiveXObject("Scripting.FileSystemObject");
 			var parent = baseFile, tmp;
-			
+			if (fso.FileExists(fileName))
+				return fileName;
 			while (parent = fso.GetParentFolderName(parent)) {
 				tmp = this.createPath(parent, fileName);
 				if (fso.FileExists(tmp)) {

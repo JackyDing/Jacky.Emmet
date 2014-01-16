@@ -1,6 +1,11 @@
 Visual Studio Emmet
 ======
 
+1.1
+----
+* Add Visual Studio 2013 support
+* Fix UpdateImageSize action
+
 1.0
 -----
 * Implemented basic emmet features on Visual Studio

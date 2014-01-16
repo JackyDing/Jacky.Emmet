@@ -84,14 +84,8 @@ emmet.exec(function(require, _) {
 				throw "Can't find " + src + ' file';
 			}
 			
-			file.read(absPath, function(err, content) {
-				if (err) {
-					throw 'Unable to read ' + absPath + ': ' + err;
-				}
-				
-				content = String(content);
-				callback(au.getImageSize(content));
-			});
+			fileContent = String(file.read(absPath));
+			return callback(au.getImageSize(fileContent));
 		}
 	}
 	

@@ -63,7 +63,7 @@ emmet.define('editor', function (require, _) {
 			// find new caret position
 			var tabstopData = require('tabStops').extract(value, {
 				escape: function(ch) {
-					return ch;
+					return '\\' + ch;
 				}
 			});
 			value = tabstopData.text;

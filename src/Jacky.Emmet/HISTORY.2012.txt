@@ -1,6 +1,10 @@
 Visual Studio Emmet 2012
 ======
 
+1.1
+-----
+* Fix UpdateImageSize action
+
 1.0
 -----
 * Implemented basic emmet features on Visual Studio

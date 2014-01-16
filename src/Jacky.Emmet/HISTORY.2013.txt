@@ -4,6 +4,7 @@ Visual Studio Emmet 2013
 1.1
 -----
 * Fit for Visual Studio 2013
+* Fix UpdateImageSize action
 
 1.0
 -----
