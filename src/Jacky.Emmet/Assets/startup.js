@@ -31,8 +31,7 @@ var editor = emmet.exec(function(require, _) {
         context.Root + '\\Assets\\javascript',
         context.Root + '\\Assets\\javascript\\loaders',
         context.Root + '\\Assets\\javascript\\parsers',
-        context.Root + '\\Assets\\javascript\\parsers\\editTree',
-        context.Root + '\\Assets\\javascript\\resolvers'
+        context.Root + '\\Assets\\javascript\\parsers\\editTree'
     ));
 
 	return require('editor');
@@ -55,6 +54,10 @@ emmet.exec(function (require, _) {
     require('filters\\single-line');
     require('filters\\trim');
     require('filters\\xsl');
+    require('resolvers\\css');
+    require('resolvers\\cssGradient');
+    require('resolvers\\generator');
+    require('resolvers\\tagName');
     require('processors\\tag-name');
     require('processors\\pasted-content');
     require('processors\\resource-matcher');

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="7126d21f-e373-42ae-b925-9f0933e0cb9a" Version="1.1" Language="en-US" Publisher="Jacky" />
+        <Identity Id="7126d21f-e373-42ae-b925-9f0933e0cb9a" Version="1.2" Language="en-US" Publisher="Jacky" />
         <DisplayName>Visual Studio Emmet 2013</DisplayName>
         <Description xml:space="preserve">Visual Studio Emmet is a visual studio plugin for Emmet, a web-developer’s toolkit that can greatly improve your HTML &amp; CSS workflow.</Description>
         <MoreInfo>http://docs.emmet.io/</MoreInfo>

@@ -48,8 +48,6 @@
  * @param {Underscore} _
  */
 emmet.define('cssResolver', function(require, _) {
-	/** Back-reference to module */
-	var module = null;
 	
 	var prefixObj = {
 		/** Real vendor prefix name */
@@ -453,57 +451,9 @@ emmet.define('cssResolver', function(require, _) {
 //		obsolete: true
 //	});
 	
-	/**
-	 * XXX register resolver
-	 * @param {TreeNode} node
-	 * @param {String} syntax
-	 */
-	require('resources').addResolver(function(node, syntax) {
-		var cssSyntaxes = prefs.getArray('css.syntaxes');
-		if (_.include(cssSyntaxes, syntax) && node.isElement()) {
-			return module.expandToSnippet(node.abbreviation, syntax);
-		}
-		
-		return null;
-	});
 	
-	var ea = require('expandAbbreviation');
-	/**
-	 * For CSS-like syntaxes, we need to handle a special use case. Some editors
-	 * (like Sublime Text 2) may insert semicolons automatically when user types
-	 * abbreviation. After expansion, user receives a double semicolon. This
-	 * handler automatically removes semicolon from generated content in such cases.
-	 * @param {IEmmetEditor} editor
-	 * @param {String} syntax
-	 * @param {String} profile
-	 */
-	ea.addHandler(function(editor, syntax, profile) {
-		var cssSyntaxes = prefs.getArray('css.syntaxes');
-		if (!_.include(cssSyntaxes, syntax)) {
-			return false;
-		}
-		
-		var caretPos = editor.getSelectionRange().end;
-		var abbr = ea.findAbbreviation(editor);
-			
-		if (abbr) {
-			var content = emmet.expandAbbreviation(abbr, syntax, profile);
-			if (content) {
-				var replaceFrom = caretPos - abbr.length;
-				var replaceTo = caretPos;
-				if (editor.getContent().charAt(caretPos) == ';' && content.charAt(content.length - 1) == ';') {
-					replaceTo++;
-				}
-				
-				editor.replaceContent(content, replaceFrom, replaceTo);
-				return true;
-			}
-		}
-		
-		return false;
-	});
 	
-	return module = {
+	var module = {
 		/**
 		 * Adds vendor prefix
 		 * @param {String} name One-character prefix name
@@ -859,4 +809,57 @@ emmet.define('cssResolver', function(require, _) {
 		getSyntaxPreference: getSyntaxPreference,
 		transformSnippet: transformSnippet
 	};
+
+    /**
+	 * XXX register resolver
+	 * @param {TreeNode} node
+	 * @param {String} syntax
+	 */
+	require('resources').addResolver(function (node, syntax) {
+	    var cssSyntaxes = prefs.getArray('css.syntaxes');
+	    if (_.include(cssSyntaxes, syntax) && node.isElement()) {
+	        return module.expandToSnippet(node.abbreviation, syntax);
+	    }
+
+	    return null;
+	});
+
+	var ea = require('expandAbbreviation');
+    /**
+	 * For CSS-like syntaxes, we need to handle a special use case. Some editors
+	 * (like Sublime Text 2) may insert semicolons automatically when user types
+	 * abbreviation. After expansion, user receives a double semicolon. This
+	 * handler automatically removes semicolon from generated content in such cases.
+	 * @param {IEmmetEditor} editor
+	 * @param {String} syntax
+	 * @param {String} profile
+	 */
+	ea.addHandler(function (editor, syntax, profile) {
+	    var cssSyntaxes = prefs.getArray('css.syntaxes');
+	    if (!_.include(cssSyntaxes, syntax)) {
+	        return false;
+	    }
+
+	    var caretPos = editor.getSelectionRange().end;
+	    var abbr = ea.findAbbreviation(editor);
+
+	    if (abbr) {
+	        var content = emmet.expandAbbreviation(abbr, syntax, profile);
+	        if (content) {
+	            var replaceFrom = caretPos - abbr.length;
+	            var replaceTo = caretPos;
+	            if (editor.getContent().charAt(caretPos) == ';' && content.charAt(content.length - 1) == ';') {
+	                replaceTo++;
+	            }
+
+	            editor.replaceContent(content, replaceFrom, replaceTo);
+	            return true;
+	        }
+	    }
+
+	    return false;
+	});
+
+
+	return module;
 });

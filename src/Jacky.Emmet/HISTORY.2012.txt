@@ -1,6 +1,10 @@
 Visual Studio Emmet 2012
 ======
 
+1.2
+-----
+* Fix css abbrevation expanding
+
 1.1
 -----
 * Fix UpdateImageSize action
