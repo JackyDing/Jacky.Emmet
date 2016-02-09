@@ -237,7 +237,6 @@
     <Content Include="Assets\settings.json">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Resource Include="Resources\VSPackage1.ico" />
     <None Include="14.0\source.extension.vsixmanifest" />
     <None Include="packages.config" />
   </ItemGroup>
