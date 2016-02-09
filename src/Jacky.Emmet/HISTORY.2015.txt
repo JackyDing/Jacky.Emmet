@@ -3,7 +3,7 @@ Visual Studio Emmet 2015
 
 1.3
 ---
-* Update for Visual Studio 2015
+* Updates for Visual Studio 2015
 
 1.2
 -----
