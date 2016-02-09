@@ -1,0 +1,19 @@
+Visual Studio Emmet 2015
+======
+
+1.3
+---
+* Update for Visual Studio 2015
+
+1.2
+-----
+* Fix css abbrevation expanding
+
+1.1
+-----
+* Fit for Visual Studio 2013
+* Fix UpdateImageSize action
+
+1.0
+-----
+* Implemented basic emmet features on Visual Studio
